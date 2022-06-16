@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  background-image: url("../pages/assets/img/bg.jpg");
 }
 
 .main {
@@ -10,22 +11,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
 }
 
 .title a {
@@ -43,74 +28,144 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  text-shadow: red -3px 0, cyan 3px 0;
+  position: relative;
+  animation: titlemove 10s infinite;
+}
+
+@keyframes titlemove {
+  0%   {left:0px;}
+  5% {left: 30px;text-shadow: cyan -4px 0, red 3px 0;}
+  10% {left: -30px;}
+  25%  {left:60px;text-shadow: purple -10px 0, cyan 3px 0;}
+  50%  {left:-60px;}
+  75%  {left:30px;text-shadow: cyan -4px 0, red 3px 0;}
+  100% {left:0px;}
 }
 
 .title,
 .description {
   text-align: center;
+  color: #fff;
 }
 
 .description {
+  letter-spacing: 10px;
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+  color: grey;
+  text-shadow: cyan -4px 0, red 2px 0;
+  position: relative;
+  animation: taskmove 10s infinite;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+@keyframes taskmove {
+  0%   {top:0px;}
+  25%  {top:20px;text-shadow: purple -4px 0, white 2px 0;}
+  50%  {top:-20px;}
+  75%  {top:20px;text-shadow: cyan 4px 0, red 2px 0;}
+  100% {top:0px;}
 }
 
-.grid {
+.github {
+  color: grey;
+  width: 92vw;
+  padding: 5vh 4vw;
+  text-align: right;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.github :hover {
+  color: grey;
+}
+
+.icons {
   display: flex;
+  column-gap: 25px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  font-size: 26px;
+  color: #fff;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: .25s;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.icon:hover {
+  outline-offset: 4px;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.icon:hover i {
+  color: grey;
+  font-size: 35px;
+  animation: shake .25s;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.skil {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  bottom: 30px;
+  z-index: 99999;
+  line-height: 60px;
+  text-align: center;
+  font-family: sans-serif;
+  text-transform:  uppercase;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.skil svg,
+.skil svg rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.skil svg rect {
+  stroke: cyan;
+  stroke-width: 4;
+  transition: 2s;
+  stroke-dasharray: 60 200;
+  stroke-dashoffset: 300;
+}
+
+.skil:hover svg rect {
+  stroke: purple;
+  stroke-dasharray: 200 60;
+  stroke-dashoffset: 0;
+}
+
+.skil:hover {
+  color: #ffff;
+}
+
+.fav {
+  animation: favmove 10s infinite;
+}
+
+@keyframes favmove {
+  0%   {left:0px;}
+  5% {left: 303px;}
+  10% {left: 0px;}
+  25%  {left:600px;}
+  50%  {left:0px;}
+  75%  {left:300px;}
+  100% {left:0px;}
 }
