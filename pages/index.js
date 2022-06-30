@@ -14,13 +14,13 @@ export default function Home() {
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
           referrerpolicy="no-referrer"
         />
       </Head>
@@ -31,6 +31,7 @@ export default function Home() {
           height="200"
           width="200"
           src={umut}
+          alt=""
         />
         <h1 className={styles.title}>Umut Gündoğdu</h1>
         <p className={styles.description}>Full Stack Developer</p>
@@ -39,6 +40,7 @@ export default function Home() {
             href="https://www.linkedin.com/in/umutgundgdu/"
             target="_blank"
             className={styles.icon}
+            rel="noreferrer"
           >
             <i className="fa-brands fa-linkedin-in"></i>
           </a>
@@ -46,6 +48,7 @@ export default function Home() {
             href="https://www.twitter.com/umutgundgdu/"
             target="_blank"
             className={styles.icon}
+            rel="noreferrer"
           >
             <i className="fa-brands fa-twitter"></i>
           </a>
@@ -53,6 +56,7 @@ export default function Home() {
             href="https://www.github.com/umutgundogdu/"
             target="_blank"
             className={styles.icon}
+            rel="noreferrer"
           >
             <i className="fa-brands fa-github"></i>
           </a>
